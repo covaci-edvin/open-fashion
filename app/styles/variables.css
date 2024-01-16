@@ -1,0 +1,15 @@
+:root {
+  --color-black: #000000;
+  --color-gray-dark: #333333;
+  --color-gray-medium: #555555;
+  --color-gray-light: #888888;
+
+  --color-white: #fcfcfc;
+  --color-white-input-bg: #f9f9f9;
+
+  --color-line: #e0cfba;
+  --color-background: #f8f0e7;
+
+  --color-primary: #a8715a;
+  --color-secondary: #dd8560;
+}
