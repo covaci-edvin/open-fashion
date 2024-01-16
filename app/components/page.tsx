@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Text from "./micro/Text";
+import Text from "./ui/Text";
 import menuSvg from "@/app/assets/svgs/menu-burger.svg";
-import Icon from "./micro/Icon";
-import Logo from "./micro/Logo";
+import Icon from "./ui/Icon";
+import Logo from "./ui/Logo";
 
 export default function Components() {
   return (
