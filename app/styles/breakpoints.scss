@@ -1,0 +1,25 @@
+$screen-sm-max: 480px;
+$screen-md-min: 481px;
+$screen-lg-min: 769px;
+$screen-xl-min: 1280px;
+
+@mixin for-phone-only {
+  @media (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: $screen-md-min) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: $screen-lg-min) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: $screen-xl-min) {
+    @content;
+  }
+}

@@ -1,8 +1,9 @@
 import Image from "next/image";
-import Text from "./micro/Text";
+import Text from "./ui/Text";
 import menuSvg from "@/app/assets/svgs/menu-burger.svg";
-import Icon from "./micro/Icon";
-import Logo from "./micro/Logo";
+import Icon from "./ui/Icon";
+import Logo from "./ui/Logo";
+import Button from "./ui/Button";
 
 export default function Components() {
   return (
@@ -16,6 +17,36 @@ export default function Components() {
       <Icon name="chevron-right" size={24} />
       <Logo />
       <Logo size="lg" />
+      <div
+        style={{
+          display: "flex",
+          gap: ".8rem",
+          flexDirection: "column",
+          alignItems: "start",
+        }}
+      >
+        <Button text={"Button Primary"} />
+        <Button type="outline" text={"Button Outline"} />
+        <Button
+          text={"Button"}
+          iconName={"arrow-backward"}
+          iconPosition="left"
+        />
+        <Button
+          type="outline"
+          text={"Button"}
+          iconName={"arrow-backward"}
+          iconPosition="left"
+        />
+        <Button text={"Button Primary"} iconName={"arrow-forward"} />
+        <Button
+          type="outline"
+          text={"Button Outline"}
+          iconName={"arrow-forward"}
+        />
+
+        <Button size="lg" text={"Button Primary"} iconName={"arrow-forward"} />
+      </div>
     </main>
   );
 }
