@@ -1,2 +1,2 @@
 ## README comming soon...
-[UI design here](https://website-name.com](https://www.figma.com/file/AhpWrKilfKctsvs2Q3SZ3a/Open-Fashion---Free-eCommerce-UI-Kit-(Community)-(Copy)?type=design&node-id=673-1135&mode=design&t=oJRQTo9UoPlqAOaR-0)https://www.figma.com/file/AhpWrKilfKctsvs2Q3SZ3a/Open-Fashion---Free-eCommerce-UI-Kit-(Community)-(Copy)?type=design&node-id=673-1135&mode=design&t=oJRQTo9UoPlqAOaR-0)
+[UI design here](https://www.figma.com/file/AhpWrKilfKctsvs2Q3SZ3a/Open-Fashion---Free-eCommerce-UI-Kit-(Community)-(Copy)?type=design&node-id=673%3A1135&mode=design&t=6mRQWF0QAvYHOPv2-1)
