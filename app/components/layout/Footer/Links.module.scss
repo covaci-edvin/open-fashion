@@ -1,0 +1,26 @@
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/globals";
+
+.list {
+  max-width: 24.7rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style: none;
+
+  li {
+    overflow: hidden;
+  }
+
+  @include for-tablet-portrait-up {
+    width: auto;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+.link {
+  @extend .link-underline-on-hover;
+}
