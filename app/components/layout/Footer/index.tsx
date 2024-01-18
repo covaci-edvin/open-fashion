@@ -10,7 +10,7 @@ import Text from "../../ui/Text";
 
 function Footer() {
   const screenSize = useScreenSize();
-  const isMobile = screenSize.width !== 0 && screenSize.width < 482;
+  const isMobile = screenSize.width !== 0 && screenSize.width < 481;
 
   return (
     <>
