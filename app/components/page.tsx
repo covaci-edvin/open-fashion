@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Text from "./ui/Text";
-import menuSvg from "@/app/assets/svgs/menu-burger.svg";
 import Icon from "./ui/Icon";
 import Logo from "./ui/Logo";
 import Button from "./ui/Button";
+import Footer from "./layout/Footer";
 
 export default function Components() {
   return (
@@ -45,8 +44,10 @@ export default function Components() {
           iconName={"arrow-forward"}
         />
 
-        <Button size="lg" text={"Button Primary"} iconName={"arrow-forward"} />
+        <Button size="lg" text={"4"} iconName={"arrow-forward"} />
       </div>
+
+      <Footer />
     </main>
   );
 }
