@@ -8,7 +8,7 @@ type Types = "primary" | "outline";
 type IconPosition = "right" | "left";
 
 type Props = {
-  text: String;
+  text: string;
   type?: Types;
   size?: Sizes;
   iconName?: Icons | null;
