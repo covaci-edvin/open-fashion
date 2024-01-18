@@ -1,0 +1,14 @@
+@import "./breakpoints.scss";
+
+.section {
+  max-width: 144rem;
+  padding: 0 1.6rem;
+
+  @include for-tablet-portrait-up {
+    padding: 0 2.4rem;
+  }
+
+  @include for-desktop-up {
+    padding: 0 7rem;
+  }
+}
