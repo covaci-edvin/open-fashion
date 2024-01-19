@@ -7,10 +7,16 @@ import styles from "./Footer.module.scss";
 import Links from "./Links";
 import Contacts from "../../ui/Contacts";
 import Text from "../../ui/Text";
+import { useEffect, useState } from "react";
 
 function Footer() {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const screenSize = useScreenSize();
-  const isMobile = screenSize.width !== 0 && screenSize.width < 481;
+
+  useEffect(() => {
+    setIsMobile(screenSize.width !== 0 && screenSize.width < 481);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [screenSize]);
 
   return (
     <>
