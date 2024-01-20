@@ -1,6 +1,5 @@
 import React, { ReactNode, forwardRef, Ref } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
-import { ChevronDownIcon } from "@radix-ui/react-icons";
 import styles from "./Trigger.module.scss";
 import Icon from "../../Icon";
 
