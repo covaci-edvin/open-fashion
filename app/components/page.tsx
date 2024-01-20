@@ -3,6 +3,50 @@ import Icon from "./ui/Icon";
 import Logo from "./ui/Logo";
 import Button from "./ui/Button";
 import Footer from "./layout/Footer";
+import Accordion from "./ui/Accordion";
+
+const DUMMY_MENU_ITEMS = [
+  {
+    title: "New",
+    content: (
+      <Text>
+        This is the flippin contentThis is the flippin contentThis is the
+        flippin contentThis is the flippin contentThis is the flippin
+        contentThis is the flippin contentThis is the flippin content
+      </Text>
+    ),
+  },
+  {
+    title: "Men",
+    content: (
+      <Text>
+        This is the flippin contentThis is the flippin contentThis is the
+        flippin contentThis is the flippin contentThis is the flippin
+        contentThis is the flippin contentThis is the flippin content
+      </Text>
+    ),
+  },
+  {
+    title: "Women",
+    content: (
+      <Text>
+        This is the flippin contentThis is the flippin contentThis is the
+        flippin contentThis is the flippin contentThis is the flippin
+        contentThis is the flippin contentThis is the flippin content
+      </Text>
+    ),
+  },
+  {
+    title: "Kids",
+    content: (
+      <Text>
+        This is the flippin contentThis is the flippin contentThis is the
+        flippin contentThis is the flippin contentThis is the flippin
+        contentThis is the flippin contentThis is the flippin content
+      </Text>
+    ),
+  },
+];
 
 export default function Components() {
   return (
@@ -16,6 +60,7 @@ export default function Components() {
       <Icon name="chevron-right" size={24} />
       <Logo />
       <Logo size="lg" />
+      <Accordion rootValue="menu" items={DUMMY_MENU_ITEMS} />
       <div
         style={{
           display: "flex",

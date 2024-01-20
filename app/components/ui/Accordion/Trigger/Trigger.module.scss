@@ -1,0 +1,18 @@
+.trigger {
+  background-color: transparent;
+  padding: 1.2rem 1.6rem;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  span {
+    transition: transform 0.3s var(--custom-ease);
+  }
+
+  &[data-state="open"] > span {
+    transform: rotate(180deg);
+  }
+}
