@@ -15,7 +15,6 @@ function Footer() {
 
   useEffect(() => {
     setIsMobile(screenSize.width !== 0 && screenSize.width < 481);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [screenSize]);
 
   return (
