@@ -3,6 +3,7 @@ import Icon from "./ui/Icon";
 import Logo from "./ui/Logo";
 import Button from "./ui/Button";
 import Footer from "./layout/Footer";
+import Header from "./layout/Header";
 import Accordion from "./ui/Accordion";
 
 const DUMMY_MENU_ITEMS = [
@@ -51,6 +52,7 @@ const DUMMY_MENU_ITEMS = [
 export default function Components() {
   return (
     <main>
+      <Header />
       <Text type="title">Title</Text>
       <Text type="subtitle-lg">SubTitle Large</Text>
       <Text type="subtitle-sm">SubTitle Small</Text>
