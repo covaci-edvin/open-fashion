@@ -5,9 +5,9 @@ import twitterIcon from "@/app/assets/svgs/socials/twitter.svg";
 import youtubeIcon from "@/app/assets/svgs/socials/youtube.svg";
 import Image from "next/image";
 
-function Socials() {
+function Socials({ className = "" }: { className?: string }) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <a href="https://twitter.com/" target="_blank">
         <Image
           className={styles.icon}
