@@ -1,0 +1,86 @@
+@import "../../../../styles/animations";
+
+.root {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3.2rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-border);
+    position: absolute;
+    bottom: 0.5rem;
+    transform: translateY(50%);
+  }
+}
+
+.trigger {
+  background-color: transparent;
+  color: var(--color-gray-light);
+  transition: color 0.3s var(--custom-ease);
+  border: none;
+  padding: 1rem 0;
+  position: relative;
+  overflow: visible;
+
+  &:hover {
+    color: var(--color-black);
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &[data-state="active"] {
+    color: var(--color-black);
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-secondary);
+    transition: all 0.5s var(--custom-ease);
+    opacity: 1;
+  }
+
+  &::before {
+    width: 0;
+    height: 1px;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateY(50%);
+  }
+
+  &::after {
+    width: 0.6rem;
+    height: 0.6rem;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+    z-index: 10;
+  }
+
+  &[data-state="active"]::before {
+    width: 100%;
+    left: 0;
+  }
+
+  &[data-state="inactive"]::before,
+  &[data-state="inactive"]::after {
+    opacity: 0;
+  }
+}
+
+.content {
+  animation: fadeIn 0.3s var(--custom-ease);
+}
