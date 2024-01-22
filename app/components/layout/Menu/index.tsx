@@ -1,5 +1,4 @@
 "use client";
-import { Dispatch, SetStateAction } from "react";
 import Icon from "../../ui/Icon";
 import styles from "./Menu.module.scss";
 import MenuTabs from "./Tabs";
@@ -7,6 +6,7 @@ import Link from "next/link";
 import Text from "../../ui/Text";
 import Separator from "../../ui/Separator";
 import Socials from "../../ui/Socials";
+import { useEffect, useRef } from "react";
 
 type Props = {
   isOpen: boolean;
@@ -14,6 +14,8 @@ type Props = {
 };
 
 function Menu({ isOpen, onClose }: Props) {
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+
   const menuClassNames = `${styles.container} ${
     isOpen ? styles["open-menu"] : ""
   }`;
@@ -22,11 +24,20 @@ function Menu({ isOpen, onClose }: Props) {
     isOpen ? styles["open-backdrop"] : ""
   }`;
 
+  useEffect(() => {
+    isOpen && closeBtnRef.current?.focus();
+  }, [isOpen]);
+
   return (
     <>
       <div className={backdropClassNames} onClick={onClose}></div>
       <div className={menuClassNames}>
-        <button onClick={onClose} className={styles["btn-close"]}>
+        <button
+          aria-label="Close"
+          ref={closeBtnRef}
+          onClick={onClose}
+          className={styles["btn-close"]}
+        >
           <Icon name="close" />
         </button>
         <div className={styles.content}>
