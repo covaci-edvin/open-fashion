@@ -1,3 +1,5 @@
+@import "../../../styles/breakpoints";
+
 .container {
   position: fixed;
   overflow: hidden scroll;
@@ -7,14 +9,35 @@
   background-color: var(--color-white);
   width: 100vw;
   height: 100vh;
-  transition: transform 0.3s var(--custom-ease);
+  transition: transform var(--animation-duration) var(--custom-ease);
   transform: translateX(-105%);
   box-shadow: var(--shadow-md);
   z-index: 100;
+
+  @include for-custom-breakpoint-up(600px) {
+    width: 40rem;
+  }
 }
 
 .open-menu {
   transform: translateX(0);
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-black);
+  transition: opacity var(--animation-duration) var(--custom-ease);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.open-backdrop {
+  opacity: 0.5;
+  pointer-events: all;
 }
 
 .btn-close {

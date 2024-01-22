@@ -1,10 +1,10 @@
 .container {
   &[data-state="open"] {
-    animation: slideDown 0.3s var(--custom-ease);
+    animation: slideDown var(--animation-duration) var(--custom-ease);
   }
 
   &[data-state="closed"] {
-    animation: slideUp 0.3s var(--custom-ease);
+    animation: slideUp var(--animation-duration) var(--custom-ease);
   }
 }
 

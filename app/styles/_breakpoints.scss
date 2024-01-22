@@ -23,3 +23,14 @@ $screen-xl-min: 1280px;
     @content;
   }
 }
+
+@mixin for-custom-breakpoint-down($custom-width) {
+  @media (max-width: $custom-width) {
+    @content;
+  }
+}
+@mixin for-custom-breakpoint-up($custom-width) {
+  @media (min-width: $custom-width) {
+    @content;
+  }
+}
