@@ -26,3 +26,28 @@
     display: none;
   }
 }
+
+.link-underline-on-hover {
+  &:link,
+  &:visited {
+    position: relative;
+    color: var(--color-black);
+    text-decoration: none;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: var(--color-black);
+      bottom: 0rem;
+      height: 0.2rem;
+      width: 100%;
+      transition: transform var(--animation-duration) ease;
+      transform: translateX(-100%);
+    }
+
+    &:hover::before {
+      transform: translateX(0);
+    }
+  }
+}

@@ -9,7 +9,7 @@
   cursor: pointer;
 
   span {
-    transition: transform 0.3s var(--custom-ease);
+    transition: transform var(--animation-duration) var(--custom-ease);
   }
 
   &[data-state="open"] > span {
