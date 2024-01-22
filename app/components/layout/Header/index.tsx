@@ -5,10 +5,12 @@ import Icon from "../../ui/Icon";
 import Logo from "../../ui/Logo";
 import styles from "./Header.module.scss";
 import Menu from "../Menu";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { PassThrough } from "stream";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const openMenuBtn = useRef<HTMLButtonElement>(null);
 
   const openMenuHandler = () => {
     setIsMenuOpen(true);
@@ -18,18 +20,23 @@ function Header() {
   const closeMenuHandler = () => {
     setIsMenuOpen(false);
     document.documentElement.classList.remove("prevent-body-scroll");
+    openMenuBtn.current?.focus();
   };
 
   return (
     <div className={styles.container}>
-      <button className={styles.btn} onClick={openMenuHandler}>
-        <Icon name="menu-burger" />
-      </button>
       <div className={styles["logo-container"]}>
         <Link href={"/home"}>
           <Logo />
         </Link>
       </div>
+      <button
+        ref={openMenuBtn}
+        className={styles.btn}
+        onClick={openMenuHandler}
+      >
+        <Icon name="menu-burger" />
+      </button>
       <div className={styles.actions}>
         <button className={styles.btn}>
           <Icon name="search" />
