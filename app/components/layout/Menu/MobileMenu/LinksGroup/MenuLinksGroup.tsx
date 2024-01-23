@@ -1,4 +1,4 @@
-import { Links } from "../types";
+import { Links } from "../../types";
 import MenuLink from "../Link/MenuLink";
 import styles from "./MenuLinksGroup.module.scss";
 

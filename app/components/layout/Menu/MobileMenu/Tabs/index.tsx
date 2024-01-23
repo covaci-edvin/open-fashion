@@ -4,7 +4,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import Accordion from "@/app/components/ui/Accordion";
 import { WOMEN_MENU, MEN_MENU, KIDS_MENU } from "@/dummy-data";
 import { ReactNode } from "react";
-import { Link } from "../types";
+import { Link } from "../../types";
 import MenuLinksGroup from "../LinksGroup/MenuLinksGroup";
 
 interface Item {

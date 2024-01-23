@@ -1,13 +1,19 @@
+@use "../../../styles/breakpoints";
 @import "../../../styles/utils";
 
 .container {
-  @extend .section;
+  @extend .section-screen-width;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   padding-top: 1.6rem;
   padding-bottom: 0.8rem;
+
+  @include breakpoints.for-desktop-up {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .logo-container {
@@ -20,6 +26,12 @@
   align-items: center;
   justify-content: center;
   z-index: -10;
+
+  @include breakpoints.for-desktop-up {
+    position: relative;
+    width: auto;
+    z-index: unset;
+  }
 }
 
 .btn,
@@ -33,7 +45,19 @@
   width: 3.2rem;
 }
 
+.btn-open-menu {
+  @include breakpoints.for-desktop-up {
+    display: none;
+  }
+}
+
 .actions {
   display: flex;
   gap: 0.8rem;
+}
+
+.navbar-wrapper {
+  @include breakpoints.for-desktop-down {
+    display: none;
+  }
 }

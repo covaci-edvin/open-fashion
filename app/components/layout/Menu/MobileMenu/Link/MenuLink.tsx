@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./MenuLink.module.scss";
 import Text from "@/app/components/ui/Text";
-import { Link as LinkT } from "../types";
+import { Link as LinkT } from "../../types";
 
 function MenuLink({ text, href }: LinkT) {
   return (

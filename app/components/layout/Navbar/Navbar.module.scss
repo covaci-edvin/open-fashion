@@ -1,0 +1,18 @@
+.active {
+  color: var(--color-primary);
+
+  &::before {
+    height: 3px;
+    opacity: 1;
+  }
+}
+
+.list {
+  list-style: none;
+  display: flex;
+}
+
+.list-item {
+  cursor: pointer;
+  display: flex;
+}

@@ -32,3 +32,9 @@
   background-color: var(--color-background-gray);
   color: var(--color-gray-medium);
 }
+
+div.separator {
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+}
