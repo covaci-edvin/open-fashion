@@ -1,7 +1,8 @@
 $screen-sm-max: 480px;
 $screen-md-min: 481px;
 $screen-lg-min: 769px;
-$screen-xl-min: 1280px;
+$screen-xl-min: 1023px;
+$screen-xxl-min: 1280px;
 
 @mixin for-phone-only {
   @media (max-width: $screen-sm-max) {
@@ -18,8 +19,18 @@ $screen-xl-min: 1280px;
     @content;
   }
 }
+@mixin for-desktop-down {
+  @media (max-width: $screen-xl-min) {
+    @content;
+  }
+}
 @mixin for-desktop-up {
   @media (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: $screen-xxl-min) {
     @content;
   }
 }

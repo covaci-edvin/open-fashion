@@ -4,12 +4,16 @@ import Link from "next/link";
 import Icon from "../../ui/Icon";
 import Logo from "../../ui/Logo";
 import styles from "./Header.module.scss";
-import Menu from "../Menu";
-import { useRef, useState } from "react";
-import { PassThrough } from "stream";
+import { useEffect, useRef, useState } from "react";
+import useScreenSize from "@/app/hooks/useScreenSize";
+import Navbar from "../Navbar";
+import MobileMenu from "../Menu/MobileMenu";
 
 function Header() {
+  const screenSize = useScreenSize();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const openMenuBtn = useRef<HTMLButtonElement>(null);
 
   const openMenuHandler = () => {
@@ -23,6 +27,10 @@ function Header() {
     openMenuBtn.current?.focus();
   };
 
+  useEffect(() => {
+    setIsDesktop(screenSize.width > 1023);
+  }, [screenSize]);
+
   return (
     <div className={styles.container}>
       <div className={styles["logo-container"]}>
@@ -30,13 +38,18 @@ function Header() {
           <Logo />
         </Link>
       </div>
-      <button
-        ref={openMenuBtn}
-        className={styles.btn}
-        onClick={openMenuHandler}
-      >
-        <Icon name="menu-burger" />
-      </button>
+      {!isDesktop && (
+        <button
+          ref={openMenuBtn}
+          className={`${styles.btn} ${styles["btn-open-menu"]}`}
+          onClick={openMenuHandler}
+        >
+          <Icon name="menu-burger" />
+        </button>
+      )}
+      <div className={styles["navbar-wrapper"]}>
+        <Navbar />
+      </div>
       <div className={styles.actions}>
         <button className={styles.btn}>
           <Icon name="search" />
@@ -45,7 +58,9 @@ function Header() {
           <Icon name="shopping-bag" />
         </Link>
       </div>
-      <Menu isOpen={isMenuOpen} onClose={closeMenuHandler} />
+      {!isDesktop && (
+        <MobileMenu isOpen={isMenuOpen} onClose={closeMenuHandler} />
+      )}
     </div>
   );
 }

@@ -1,11 +1,10 @@
-"use client";
-import Icon from "../../ui/Icon";
+import Icon from "../../../ui/Icon";
 import styles from "./Menu.module.scss";
 import MenuTabs from "./Tabs";
 import Link from "next/link";
-import Text from "../../ui/Text";
-import Separator from "../../ui/Separator";
-import Socials from "../../ui/Socials";
+import Text from "../../../ui/Text";
+import Separator from "../../../ui/Separator";
+import Socials from "../../../ui/Socials";
 import { useEffect, useRef } from "react";
 
 type Props = {
@@ -13,7 +12,7 @@ type Props = {
   onClose: () => void;
 };
 
-function Menu({ isOpen, onClose }: Props) {
+function MobileMenu({ isOpen, onClose }: Props) {
   const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   const menuClassNames = `${styles.container} ${
@@ -61,4 +60,4 @@ function Menu({ isOpen, onClose }: Props) {
   );
 }
 
-export default Menu;
+export default MobileMenu;

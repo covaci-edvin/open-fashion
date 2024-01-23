@@ -1,5 +1,5 @@
-import { Links } from "../types";
 import MenuLink from "../Link/MenuLink";
+import { Links } from "../types";
 import styles from "./MenuLinksGroup.module.scss";
 
 function MenuLinksGroup({ links }: Links) {

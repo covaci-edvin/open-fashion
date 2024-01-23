@@ -1,5 +1,3 @@
-import styles from "./Text.module.scss";
-
 type TextVariants =
   | "title"
   | "subtitle-lg"
@@ -14,15 +12,15 @@ type Props = {
 };
 
 function Text({ type = "body-lg", children }: Props) {
-  if (type === "title") return <h1 className={styles.title}>{children}</h1>;
+  if (type === "title") return <h1 className="title">{children}</h1>;
 
   if (type === "subtitle-lg")
-    return <h2 className={styles["subtitle-lg"]}>{children}</h2>;
+    return <h2 className="subtitle-lg">{children}</h2>;
 
   if (type === "subtitle-sm")
-    return <h3 className={styles["subtitle-sm"]}>{children}</h3>;
+    return <h3 className="subtitle-sm">{children}</h3>;
 
-  return <p className={styles[type]}>{children}</p>;
+  return <p className={type}>{children}</p>;
 }
 
 export default Text;
