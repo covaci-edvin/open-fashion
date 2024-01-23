@@ -1,4 +1,4 @@
-import { Link } from "../types";
+import { Link } from "../MobileMenu/types";
 
 export type MenuList = {
   title: string;
