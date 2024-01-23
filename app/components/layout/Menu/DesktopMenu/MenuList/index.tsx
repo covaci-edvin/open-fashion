@@ -1,5 +1,4 @@
 import Text from "@/app/components/ui/Text";
-import { Link, Links } from "../../types";
 import MenuListItem from "./Item";
 import styles from "./MenuList.module.scss";
 import { MenuList } from "../types";

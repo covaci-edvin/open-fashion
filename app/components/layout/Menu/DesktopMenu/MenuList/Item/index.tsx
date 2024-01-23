@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./MenuListItem.module.scss";
-import { Link as LinkT } from "../../../types";
+import { Link as LinkT } from "../../../MobileMenu/types";
 
 type Props = {
   link: LinkT;
