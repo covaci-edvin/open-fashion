@@ -5,6 +5,7 @@ import Button from "./ui/Button";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Accordion from "./ui/Accordion";
+import Tag from "./ui/Tag";
 
 const DUMMY_MENU_ITEMS = [
   {
@@ -61,6 +62,11 @@ export default function Components() {
       <Text type="body-sm">Body Small</Text>
       <Icon name="chevron-right" size={24} />
       <Logo />
+      <div style={{ display: "flex", gap: "30px" }}>
+        <Tag>2021</Tag>
+        <Tag>normalhashtag</Tag>
+        <Tag type="filter-tag">Engagement Rings</Tag>
+      </div>
       <Logo size="lg" />
       <Accordion rootValue="menu" items={DUMMY_MENU_ITEMS} />
       <div
