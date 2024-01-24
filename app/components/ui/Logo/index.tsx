@@ -1,5 +1,4 @@
 import React from "react";
-import OpenFashionLogo from "@/app/assets/svgs/OF-Logo.svg";
 import Image from "next/image";
 
 const sizes = {
@@ -20,7 +19,7 @@ type Props = {
 function Logo({ size = "md" }: Props) {
   return (
     <Image
-      src={OpenFashionLogo}
+      src={"/assets/svgs/OF-Logo.svg"}
       width={sizes[size].width}
       height={sizes[size].height}
       alt="Open Fashion Logo"

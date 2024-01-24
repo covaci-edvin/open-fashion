@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./styles/styles.scss";
-import "./assets/icons/icomoon/icon-font.css";
+import "/public/assets/icons/icomoon/icon-font.css";
 import { tenorSans } from "./ui/fonts";
 
 export const metadata: Metadata = {

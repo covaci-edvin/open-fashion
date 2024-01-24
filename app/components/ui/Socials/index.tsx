@@ -1,8 +1,4 @@
 import styles from "./Socials.module.scss";
-
-import instagramIcon from "@/app/assets/svgs/socials/instagram.svg";
-import twitterIcon from "@/app/assets/svgs/socials/twitter.svg";
-import youtubeIcon from "@/app/assets/svgs/socials/youtube.svg";
 import Image from "next/image";
 
 function Socials({ className = "" }: { className?: string }) {
@@ -11,7 +7,7 @@ function Socials({ className = "" }: { className?: string }) {
       <a href="https://twitter.com/" target="_blank">
         <Image
           className={styles.icon}
-          src={twitterIcon}
+          src={"/assets/svgs/socials/twitter.svg"}
           width={24}
           height={24}
           alt="twitter logo"
@@ -20,7 +16,7 @@ function Socials({ className = "" }: { className?: string }) {
       <a href="https://instagram.com/" target="_blank">
         <Image
           className={styles.icon}
-          src={instagramIcon}
+          src={"/assets/svgs/socials/instagram.svg"}
           width={24}
           height={24}
           alt="instagram logo"
@@ -29,7 +25,7 @@ function Socials({ className = "" }: { className?: string }) {
       <a href="https://www.youtube.com/" target="_blank">
         <Image
           className={styles.icon}
-          src={youtubeIcon}
+          src={"/assets/svgs/socials/youtube.svg"}
           width={24}
           height={24}
           alt="youtube logo"
