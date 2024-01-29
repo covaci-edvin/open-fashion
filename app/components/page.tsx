@@ -6,6 +6,8 @@ import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Accordion from "./ui/Accordion";
 import Tag from "./ui/Tag";
+import Product from "./ui/Product";
+import { DUMMY_PRODUCTS } from "@/dummy-data";
 
 const DUMMY_MENU_ITEMS = [
   {
@@ -54,6 +56,31 @@ export default function Components() {
   return (
     <main>
       <Header />
+      <Product variant="listview" product={DUMMY_PRODUCTS[0]} />
+      <div
+        style={{
+          margin: "2rem",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          columnGap: "2rem",
+        }}
+      >
+        <Product variant="gridview" product={DUMMY_PRODUCTS[1]} />
+        <Product variant="gridview" product={DUMMY_PRODUCTS[2]} />
+      </div>
+      <div
+        style={{
+          margin: "2rem",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          columnGap: "2rem",
+        }}
+      >
+        <Product variant="homepage" product={DUMMY_PRODUCTS[3]} />
+        <Product variant="homepage" product={DUMMY_PRODUCTS[3]} />
+      </div>
+      <Product variant="full" product={DUMMY_PRODUCTS[0]} />
+
       <Text type="title">Title</Text>
       <Text type="subtitle-lg">SubTitle Large</Text>
       <Text type="subtitle-sm">SubTitle Small</Text>

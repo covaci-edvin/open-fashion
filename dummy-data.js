@@ -101,3 +101,38 @@ export const KIDS_MENU = [
     ],
   },
 ];
+
+export const DUMMY_PRODUCTS = [
+  {
+    id: "SKU123",
+    name: "Elegance Sweater",
+    shortDescription: "Soft Knit Sweater in Blue",
+    price: 89.99,
+    rating: 4.5,
+    images: ["/assets/images/product-1.jpg"],
+  },
+  {
+    id: "SKU456",
+    name: "Versatile Cardigan",
+    shortDescription: "Classic Black Cardigan",
+    price: 75.5,
+    rating: 4.2,
+    images: ["/assets/images/product-2.jpg"],
+  },
+  {
+    id: "SKU789",
+    name: "Cozy Winter Jacket",
+    shortDescription: "Warm Winter Jacket in Red",
+    price: 110,
+    rating: 4.9,
+    images: ["/assets/images/product-3.jpg"],
+  },
+  {
+    id: "SKU321",
+    name: "Casual Chic Pullover",
+    shortDescription: "Comfortable Pullover in Gray",
+    price: 65.99,
+    rating: 4.0,
+    images: ["/assets/images/product-4.jpg"],
+  },
+];

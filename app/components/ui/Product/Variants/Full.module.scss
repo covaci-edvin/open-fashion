@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+
+  button {
+    position: absolute;
+    right: 1.6rem;
+    bottom: 1.6rem;
+  }
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-wrapper {
+  align-self: flex-end;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
