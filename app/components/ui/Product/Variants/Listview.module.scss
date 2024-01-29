@@ -1,0 +1,38 @@
+@use "../../../../styles/breakpoints";
+
+.wrapper {
+  display: flex;
+  gap: 1.2rem;
+
+  @include breakpoints.for-tablet-portrait-up {
+    gap: 2.4rem;
+  }
+}
+
+.img {
+  object-fit: cover;
+
+  @include breakpoints.for-tablet-portrait-up {
+    height: 20.1rem;
+    width: 15rem;
+  }
+}
+
+.info-wrapper {
+  flex: 1;
+}
+
+.bottom-wrapper {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-wrapper {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.rating {
+  font-size: 1.2rem;
+}
