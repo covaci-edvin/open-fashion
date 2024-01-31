@@ -1,0 +1,22 @@
+@use "../../styles/breakpoints";
+@import "../../styles/utils";
+
+.section-container {
+  height: 60rem;
+  position: relative;
+  @extend .section;
+  display: flex;
+
+  @include breakpoints.for-tablet-landscape-down {
+    padding: 0;
+  }
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 100%;
+
+  @include breakpoints.for-tablet-landscape-up {
+    width: 50%;
+  }
+}

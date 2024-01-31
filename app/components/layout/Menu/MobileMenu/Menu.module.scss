@@ -33,6 +33,7 @@
   transition: opacity var(--animation-duration) var(--custom-ease);
   pointer-events: none;
   opacity: 0;
+  z-index: 90;
 }
 
 .open-backdrop {

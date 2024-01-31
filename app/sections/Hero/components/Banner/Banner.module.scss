@@ -1,0 +1,71 @@
+@use "../../../../styles/breakpoints";
+
+.container {
+  $margin-top-and-bottom: 4rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% - $margin-top-and-bottom * 2);
+  margin: $margin-top-and-bottom 0;
+  display: flex;
+  gap: 16rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+
+  @include breakpoints.for-tablet-landscape-up {
+    transition: background-color 2s var(--custom-ease);
+    position: static;
+    margin: 0;
+    height: 100%;
+    width: 50%;
+    padding: $margin-top-and-bottom 0;
+    gap: 3.2rem;
+  }
+
+  @include breakpoints.for-tablet-landscape-down {
+    background-color: transparent !important;
+  }
+}
+
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-element {
+  text-transform: uppercase;
+  font-size: 3.8rem;
+  letter-spacing: 1.5px;
+  color: var(--color-white);
+  opacity: 0.7;
+  line-height: 4rem;
+
+  @include breakpoints.for-tablet-landscape-up {
+    opacity: 0.9;
+  }
+}
+
+.and-element {
+  font-size: 3rem;
+}
+
+.luxury-element {
+  margin-left: 0.5rem;
+}
+
+.fashion-element {
+  margin-left: 2rem;
+}
+
+.btn-cta {
+  background-color: rgba(#000, 0.4);
+  color: var(--color-white);
+  border: none;
+  border-radius: 10rem;
+  padding: 0.8rem 3rem;
+  letter-spacing: 1px;
+  line-height: 2.4rem;
+  backdrop-filter: blur(0.4rem);
+}
