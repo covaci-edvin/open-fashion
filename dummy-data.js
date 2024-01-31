@@ -136,3 +136,9 @@ export const DUMMY_PRODUCTS = [
     images: ["/assets/images/product-4.jpg"],
   },
 ];
+
+export const DUMMY_HERO_BG_IMGS = [
+  "/assets/images/hero-1.jpg",
+  "/assets/images/hero-2.jpg",
+  "/assets/images/hero-3.jpg",
+];

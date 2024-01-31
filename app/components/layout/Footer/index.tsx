@@ -7,7 +7,7 @@ import Text from "../../ui/Text";
 
 function Footer() {
   return (
-    <>
+    <footer>
       <section className={styles.container}>
         <div className={styles.contacts}>
           <Socials />
@@ -20,7 +20,7 @@ function Footer() {
       <section className={styles.copyright}>
         <Text type="body-sm">Copyright&copy; OpenUI All Rights Reserved.</Text>
       </section>
-    </>
+    </footer>
   );
 }
 

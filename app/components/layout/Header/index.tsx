@@ -32,7 +32,7 @@ function Header() {
   }, [screenSize]);
 
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <div className={styles["logo-container"]}>
         <Link href={"/home"}>
           <Logo />
@@ -61,7 +61,7 @@ function Header() {
       {!isDesktop && (
         <MobileMenu isOpen={isMenuOpen} onClose={closeMenuHandler} />
       )}
-    </div>
+    </header>
   );
 }
 

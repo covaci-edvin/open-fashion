@@ -24,7 +24,10 @@ function ListItem({ menuCategory, href, children }: ListItemProps) {
 
   return (
     <li ref={triggerRef} role="menuitem" className={styles["list-item"]}>
-      <Link className={`navbar-link ${linkClassNames}`} href={href}>
+      <Link
+        className={`${styles["navbar-link"]} ${linkClassNames}`}
+        href={href}
+      >
         <Text type="subtitle-sm">{children}</Text>
       </Link>
       <DesktopMenu showMenu={isHovered} menuLists={menuCategory} />
