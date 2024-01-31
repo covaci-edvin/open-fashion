@@ -1,7 +1,9 @@
 $screen-sm-max: 480px;
 $screen-md-min: 481px;
+$screen-md-max: 768px;
 $screen-lg-min: 769px;
-$screen-xl-min: 1023px;
+$screen-lg-max: 1023px;
+$screen-xl-min: 1024px;
 $screen-xxl-min: 1280px;
 
 @mixin for-phone-only {
@@ -14,13 +16,18 @@ $screen-xxl-min: 1280px;
     @content;
   }
 }
+@mixin for-tablet-landscape-down {
+  @media (max-width: $screen-md-max) {
+    @content;
+  }
+}
 @mixin for-tablet-landscape-up {
   @media (min-width: $screen-lg-min) {
     @content;
   }
 }
 @mixin for-desktop-down {
-  @media (max-width: $screen-xl-min) {
+  @media (max-width: $screen-lg-max) {
     @content;
   }
 }
