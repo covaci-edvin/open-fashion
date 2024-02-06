@@ -2,9 +2,10 @@
 @import "../../styles/utils";
 
 .section-container {
+  @extend .section;
+
   height: 60rem;
   position: relative;
-  @extend .section;
   display: flex;
 
   @include breakpoints.for-tablet-landscape-down {
