@@ -60,3 +60,11 @@ $section-max-width: 1200px;
     }
   }
 }
+
+.link,
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: var(--color-black);
+  cursor: pointer;
+}
