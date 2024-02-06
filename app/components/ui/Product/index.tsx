@@ -1,4 +1,3 @@
-import styles from "./Product.module.scss";
 import Full from "./Variants/Full";
 import Gridview from "./Variants/Gridview";
 import Homepage from "./Variants/Homepage";
@@ -11,10 +10,12 @@ type Props = {
 };
 
 function Product({ variant, product }: Props) {
-  if (variant === "listview") return <Listview {...product} />;
-  if (variant === "gridview") return <Gridview {...product} />;
-  if (variant === "homepage") return <Homepage {...product} />;
-  if (variant === "full") return <Full {...product} />;
+  const url: string = "products";
+
+  if (variant === "listview") return <Listview {...product} url={url} />;
+  if (variant === "gridview") return <Gridview {...product} url={url} />;
+  if (variant === "homepage") return <Homepage {...product} url={url} />;
+  if (variant === "full") return <Full {...product} url={url} />;
 
   return <div>Product</div>;
 }

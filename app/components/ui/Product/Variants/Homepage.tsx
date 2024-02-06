@@ -1,12 +1,21 @@
 import Image from "next/image";
 import styles from "./Homepage.module.scss";
 import commonStyles from "./CommonStyles.module.scss";
-import { Product } from "../types";
+import { ProductsProps } from "../types";
 import Text from "../../Text";
 
-function Homepage({ images, name, shortDescription, price }: Product) {
+function Homepage({
+  id,
+  images,
+  name,
+  shortDescription,
+  price,
+  url,
+}: ProductsProps) {
+  const productHref = `${url}/${id}`;
+
   return (
-    <div className={styles.wrapper}>
+    <a href={productHref} className={`${styles.wrapper} link`}>
       <div className={styles["img-wrapper"]}>
         <Image
           className={styles.img}
@@ -28,7 +37,7 @@ function Homepage({ images, name, shortDescription, price }: Product) {
           <span className={`subtitle-lg ${commonStyles.price}`}>${price}</span>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 

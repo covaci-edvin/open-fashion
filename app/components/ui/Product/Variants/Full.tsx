@@ -1,13 +1,22 @@
 import Image from "next/image";
 import styles from "./Full.module.scss";
 import commonStyles from "./CommonStyles.module.scss";
-import { Product } from "../types";
+import { ProductsProps } from "../types";
 import Text from "../../Text";
 import FavoriteButton from "../../FavoriteButton";
 
-function Full({ images, name, shortDescription, price }: Product) {
+function Full({
+  images,
+  name,
+  shortDescription,
+  price,
+  id,
+  url,
+}: ProductsProps) {
+  const productHref = `${url}/${id}`;
+
   return (
-    <div className={styles.wrapper}>
+    <a href={productHref} className={styles.wrapper}>
       <div className={styles["img-wrapper"]}>
         <Image
           className={styles.img}
@@ -32,7 +41,7 @@ function Full({ images, name, shortDescription, price }: Product) {
           <span className={`subtitle-lg ${commonStyles.price}`}>${price}</span>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 

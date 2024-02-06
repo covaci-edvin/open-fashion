@@ -1,13 +1,23 @@
 import Image from "next/image";
 import styles from "./Listview.module.scss";
 import commonStyles from "./CommonStyles.module.scss";
-import { Product } from "../types";
+import { ProductsProps } from "../types";
 import Text from "../../Text";
 import FavoriteButton from "../../FavoriteButton";
 
-function Listview({ images, name, shortDescription, price, rating }: Product) {
+function Listview({
+  images,
+  name,
+  shortDescription,
+  price,
+  rating,
+  id,
+  url,
+}: ProductsProps) {
+  const productHref = `${url}/${id}`;
+
   return (
-    <div className={styles.wrapper}>
+    <a href={productHref} className={styles.wrapper}>
       <Image
         className={styles.img}
         src={images[0]}
@@ -37,7 +47,7 @@ function Listview({ images, name, shortDescription, price, rating }: Product) {
           <FavoriteButton />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
