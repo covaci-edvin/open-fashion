@@ -1,5 +1,7 @@
 import { bodoniModa } from "@/app/ui/fonts";
 import styles from "./Banner.module.scss";
+import Link from "next/link";
+import Text from "@/app/components/ui/Text";
 
 type Props = {
   bgColor: string;
@@ -28,9 +30,11 @@ function Banner({ bgColor }: Props) {
           <span className={styles["banner-element"]}>Accessories</span>
         </div>
       </div>
-      <button className={`title ${styles["btn-cta"]} `}>
-        Explore Collection
-      </button>
+      <Link href={"/"} className={`${styles["btn-cta"]} link`}>
+        <Text type="title" className={styles["link-text"]}>
+          Explore Collection
+        </Text>
+      </Link>
     </div>
   );
 }
