@@ -13,6 +13,18 @@ $section-max-width: 1200px;
   }
 }
 
+.section-top-margin {
+  margin-top: 3.5rem;
+
+  @include breakpoints.for-tablet-landscape-up {
+    margin-top: 6rem;
+  }
+
+  @include breakpoints.for-desktop-up {
+    margin-top: 8rem;
+  }
+}
+
 .section-screen-width {
   @extend .section;
 
