@@ -18,7 +18,7 @@ function Listview({
   const productHref = `${url}/${id}`;
 
   return (
-    <Link href={productHref} className={styles.wrapper}>
+    <Link href={productHref} className={`${styles.wrapper} link`}>
       <Image
         className={styles.img}
         src={images[0]}

@@ -17,7 +17,7 @@ function Full({
   const productHref = `${url}/${id}`;
 
   return (
-    <Link href={productHref} className={styles.wrapper}>
+    <Link href={productHref} className={`${styles.wrapper} link`}>
       <div className={styles["img-wrapper"]}>
         <Image
           className={styles.img}
