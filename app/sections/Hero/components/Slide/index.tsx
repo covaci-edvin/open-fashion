@@ -14,7 +14,6 @@ function HeroSlide({ imageUrl }: Props) {
         src={imageUrl}
         height={600}
         width={375}
-        className={styles.img}
         alt="collection"
       />
     </div>
