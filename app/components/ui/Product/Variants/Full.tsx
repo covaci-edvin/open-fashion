@@ -4,6 +4,7 @@ import commonStyles from "./CommonStyles.module.scss";
 import { ProductsProps } from "../types";
 import Text from "../../Text";
 import FavoriteButton from "../../FavoriteButton";
+import Link from "next/link";
 
 function Full({
   images,
@@ -16,7 +17,7 @@ function Full({
   const productHref = `${url}/${id}`;
 
   return (
-    <a href={productHref} className={styles.wrapper}>
+    <Link href={productHref} className={styles.wrapper}>
       <div className={styles["img-wrapper"]}>
         <Image
           className={styles.img}
@@ -41,7 +42,7 @@ function Full({
           <span className={`subtitle-lg ${commonStyles.price}`}>${price}</span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 
