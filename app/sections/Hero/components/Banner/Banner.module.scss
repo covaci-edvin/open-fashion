@@ -61,11 +61,14 @@
 
 .btn-cta {
   background-color: rgba(#000, 0.4);
-  color: var(--color-white);
   border: none;
   border-radius: 10rem;
   padding: 0.8rem 3rem;
+  backdrop-filter: blur(0.4rem);
+}
+
+.link-text {
   letter-spacing: 1px;
   line-height: 2.4rem;
-  backdrop-filter: blur(0.4rem);
+  color: var(--color-white);
 }
