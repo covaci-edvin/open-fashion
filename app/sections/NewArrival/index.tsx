@@ -6,19 +6,19 @@ import { DUMMY_NEW_ARRIVAL_PRODUCTS } from "@/dummy-data";
 import Product from "@/app/components/ui/Product";
 import Link from "next/link";
 import Icon from "@/app/components/ui/Icon";
+import NewArrivalProductsLink from "./components/NewArrivalProductsLink";
 
 function NewArrivalSection() {
+  const newArrivalProductsHref = "/";
+
   return (
     <section className={`section section-top-margin`}>
       <div className={styles.heading}>
         <Text type="title">New Arrival</Text>
-        <Link
-          href="/"
-          className={`${styles["explore-link"]} ${styles["explore-link-top"]} link`}
-        >
-          <span className="body-lg">Explore More</span>
-          <Icon name="arrow-forward" size={18} />
-        </Link>
+        <NewArrivalProductsLink
+          href={newArrivalProductsHref}
+          className={`${styles["explore-link"]} ${styles["explore-link-top"]}`}
+        />
       </div>
       <Separator className={styles.separator} />
       <div className={styles.products}>
@@ -26,13 +26,10 @@ function NewArrivalSection() {
           <Product variant="homepage" key={index} product={product} />
         ))}
       </div>
-      <Link
-        href="/"
-        className={`${styles["explore-link"]} ${styles["explore-link-bottom"]} link`}
-      >
-        <span className="body-lg">Explore More</span>
-        <Icon name="arrow-forward" size={18} />
-      </Link>
+      <NewArrivalProductsLink
+        href={newArrivalProductsHref}
+        className={`${styles["explore-link"]} ${styles["explore-link-bottom"]}`}
+      />
     </section>
   );
 }
