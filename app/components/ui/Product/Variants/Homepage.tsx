@@ -3,6 +3,7 @@ import styles from "./Homepage.module.scss";
 import commonStyles from "./CommonStyles.module.scss";
 import { ProductsProps } from "../types";
 import Text from "../../Text";
+import Link from "next/link";
 
 function Homepage({
   id,
@@ -15,7 +16,7 @@ function Homepage({
   const productHref = `${url}/${id}`;
 
   return (
-    <a href={productHref} className={`${styles.wrapper} link`}>
+    <Link href={productHref} className={`${styles.wrapper} link`}>
       <div className={styles["img-wrapper"]}>
         <Image
           className={styles.img}
@@ -37,7 +38,7 @@ function Homepage({
           <span className={`subtitle-lg ${commonStyles.price}`}>${price}</span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

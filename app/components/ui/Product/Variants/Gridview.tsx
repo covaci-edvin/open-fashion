@@ -4,6 +4,7 @@ import commonStyles from "./CommonStyles.module.scss";
 import { ProductsProps } from "../types";
 import Text from "../../Text";
 import FavoriteButton from "../../FavoriteButton";
+import Link from "next/link";
 
 function Gridview({
   images,
@@ -16,7 +17,7 @@ function Gridview({
   const productHref = `${url}/${id}`;
 
   return (
-    <a href={productHref} className={`${styles.wrapper} link`}>
+    <Link href={productHref} className={`${styles.wrapper} link`}>
       <div className={styles["img-wrapper"]}>
         <Image
           className={styles.img}
@@ -39,7 +40,7 @@ function Gridview({
           <span className={`subtitle-lg ${commonStyles.price}`}>${price}</span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

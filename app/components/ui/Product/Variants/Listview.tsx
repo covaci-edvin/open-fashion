@@ -4,6 +4,7 @@ import commonStyles from "./CommonStyles.module.scss";
 import { ProductsProps } from "../types";
 import Text from "../../Text";
 import FavoriteButton from "../../FavoriteButton";
+import Link from "next/link";
 
 function Listview({
   images,
@@ -17,7 +18,7 @@ function Listview({
   const productHref = `${url}/${id}`;
 
   return (
-    <a href={productHref} className={styles.wrapper}>
+    <Link href={productHref} className={styles.wrapper}>
       <Image
         className={styles.img}
         src={images[0]}
@@ -47,7 +48,7 @@ function Listview({
           <FavoriteButton />
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 
