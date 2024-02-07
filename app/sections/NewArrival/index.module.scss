@@ -1,0 +1,69 @@
+@use "../../styles/breakpoints";
+
+.section {
+  margin-top: 3.5rem;
+}
+
+.heading {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoints.for-desktop-up {
+    justify-content: space-between;
+  }
+}
+
+.separator {
+  @include breakpoints.for-desktop-up {
+    display: none;
+  }
+}
+
+.products {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.3rem;
+
+  @include breakpoints.for-tablet-landscape-up {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.explore-link {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem;
+
+  span:last-child {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    span:last-child {
+      transform: translateX(0.5rem);
+    }
+  }
+}
+
+.explore-link-top {
+  display: none;
+  margin-top: 0;
+  padding: 0.8rem;
+
+  @include breakpoints.for-desktop-up {
+    display: flex;
+  }
+}
+
+.explore-link-bottom {
+  @include breakpoints.for-desktop-up {
+    display: none;
+  }
+}
