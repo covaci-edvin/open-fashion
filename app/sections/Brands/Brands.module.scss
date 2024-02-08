@@ -1,0 +1,23 @@
+@use "../../styles/breakpoints";
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.img {
+  width: min-content;
+
+  @include breakpoints.for-desktop-up {
+    height: 2rem;
+  }
+}
