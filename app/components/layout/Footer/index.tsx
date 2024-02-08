@@ -8,12 +8,10 @@ import Text from "../../ui/Text";
 function Footer() {
   return (
     <footer>
-      <section className={styles.container}>
-        <div className={styles.contacts}>
-          <Socials />
-          <Separator />
-          <Contacts />
-        </div>
+      <section className={`section section-top-margin ${styles.container}`}>
+        <Socials className={styles.socials} />
+        <Separator className={styles.separator} />
+        <Contacts />
         <Separator className={styles.separator} />
         <Links />
       </section>
