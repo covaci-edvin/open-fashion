@@ -177,3 +177,12 @@ export const DUMMY_HERO_BG_IMGS = [
   "/assets/images/hero-2.jpg",
   "/assets/images/hero-3.jpg",
 ];
+
+export const DUMMY_BRANDS = [
+  "/assets/svgs/brands/boss.svg",
+  "/assets/svgs/brands/burberry.svg",
+  "/assets/svgs/brands/catier.svg",
+  "/assets/svgs/brands/gucci.svg",
+  "/assets/svgs/brands/prada.svg",
+  "/assets/svgs/brands/tiffany-&-co.svg",
+];
