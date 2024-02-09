@@ -5,13 +5,15 @@ import Separator from "@/app/components/ui/Separator";
 
 function BrandBox({ svgUrl }: { svgUrl: string }) {
   return (
-    <Image
-      src={svgUrl}
-      alt="brand"
-      width={20}
-      height={16}
-      className={styles.img}
-    />
+    <div className={styles["brand-wrapper"]}>
+      <Image
+        src={svgUrl}
+        alt="brand"
+        width={20}
+        height={16}
+        className={styles.img}
+      />
+    </div>
   );
 }
 
