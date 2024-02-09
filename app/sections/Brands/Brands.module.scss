@@ -14,10 +14,15 @@
   gap: 4rem;
 }
 
-.img {
-  width: min-content;
+.brand-wrapper {
+  height: 1.6rem;
 
   @include breakpoints.for-desktop-up {
     height: 2rem;
   }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
 }
